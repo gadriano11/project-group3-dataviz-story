@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<!--------------------------- Head section, Scripts loaded ------------------------------------>
+
+<head>
+  <title>Global Poverty Analysis Dashboard</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+</head>
+
+<!--------------------------- Body section ------------------------------------>
+
+<body>
+  <!--------------------------- Header section ------------------------------------>
+  <div class="dashboard-header">
+    <div class="header-image"></div> <!-- Removed <img> tags, will use CSS for background -->
+    <div class="header-box">
+      <h1>Global Poverty Analysis Dashboard</h1>
+      <h2>Correlation Between Poverty, Education, and Corruption Factors</h2>
+    </div>
+  </div>
+  <!--------------------------- Content section ------------------------------------>
+
+  <!--------------------------- A. Map section ------------------------------------>
+  <div class="content-container">
+    <div class="map-content">
+      <div id="map"></div>
+    </div>
+    <!--------------------------- B. Pie section ------------------------------------>
+    <div class="pie-content">
+      <!--Add content here--->
+    </div>
+  </div>
+  <!--------------------------- B2. Pie Modal Window section ------------------------------------>
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Region Details</h2>
+      <p id="modal-text">Some text in the Modal..</p>
+    </div>
+
+
+    <!--------------------------- C. Bar section ------------------------------------>
+    <div class="bar-content">
+      <!--Add content here--->
+    </div>
+    <!--------------------------- D. Line section ------------------------------------>
+    <div class="line-content">
+      <!--Add content here--->
+    </div>
+    <!--------------------------- E. Scripts section ------------------------------------>
+    <script type="text/javascript" src="//counter.websiteout.net/js/24/4/0/0"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="static/js/map.js"></script>
+    <script src="static/js/piechart.js"></script>
+
+    <!--------------------------- E. site counter ------------------------------------>
+
+
+
+</body>
+
+</html>
