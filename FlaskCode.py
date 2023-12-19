@@ -31,7 +31,7 @@ def template():
     # Create our session (link) from Python to the DB
     session = Session(engine)
     # Query all data
-    results = session.query(PovertyData.country_code, PovertyData.country_name, PovertyData.region,
+    results = session.query(PovertyData.country_code, PovertyData.country_name, PovertyData.region, PovertyData.corruption_index_score, PovertyData.rank,
                             PovertyData.latitude, PovertyData.longitude, PovertyData.female_gross_enrolment,
                             PovertyData.male_gross_enrolment, PovertyData.income_less_than_two_one_five).all()
     session.close()
@@ -42,18 +42,20 @@ def template():
 @app.route("/api/v1.0/jsonify")
 def jsonify_():
     session = Session(engine)
-    results = session.query(PovertyData.country_code, PovertyData.country_name, PovertyData.region,
+    results = session.query(PovertyData.country_code, PovertyData.country_name, PovertyData.region, PovertyData.corruption_index_score, PovertyData.rank,
                             PovertyData.latitude, PovertyData.longitude, PovertyData.female_gross_enrolment,
                             PovertyData.male_gross_enrolment, PovertyData.income_less_than_two_one_five).all()
     session.close()
 
     # Create a dictionary from the row data and append to a list of all_countries
     all_countries = []
-    for country_code, country_name, region, latitude, longitude, female_gross_enrolment, male_gross_enrolment, income_less_than_two_one_five in results:
+    for country_code, country_name, region, corruption_index_score, rank, latitude, longitude, female_gross_enrolment, male_gross_enrolment, income_less_than_two_one_five in results:
         country_dict = {}
         country_dict["country_code"] = country_code
         country_dict["country_name"] = country_name
         country_dict["region"] = region
+        country_dict["corruption_index_score"] = corruption_index_score
+        country_dict["rank"] = rank
         country_dict["latitude"] = latitude
         country_dict["longitude"] = longitude
         country_dict["female_gross_enrolment"] = female_gross_enrolment

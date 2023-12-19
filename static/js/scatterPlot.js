@@ -3,7 +3,7 @@ let dataSet = [];
 let currentChart;
 
 // Load and parse the data
-fetch('static/js/poverty_world_data.json')
+fetch('/api/v1.0/jsonify')
   .then(response => response.json())
   .then(data => {
     dataSet = data;
