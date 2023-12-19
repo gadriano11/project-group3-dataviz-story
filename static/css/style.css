@@ -1,143 +1,49 @@
-/* ------------------- General styling ------------------------ */
-body,
-html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* ---------------------------------------------------------- */
-
-
-
-/* ------------------- Header styling ------------------------ */
-.header-image {
-  width: 100%;
-  /* Adjust width as needed */
-  height: 150px;
-  /* Adjust height as needed */
-  background-image: url('homeless.jpg');
-  background-repeat: repeat;
-  background-size: 300px 150px;
-}
-
-.header-image img {
-  width: 50%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
-  display: block;
-}
-
-h1,
-h2 {
-  margin: 0;
-  padding: 0;
-}
-
-.header-box {
-  background-color: #d3c2ae;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.dashboard-header {
-  text-align: center;
-  width: 100%;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-
-/* ---------------------------------------------------------- */
-/* ------------------- both map and pie chart ------------------------ */
-.content-container {
-  display: flex;
-  justify-content: center;
-  align-items: start; /* Align items to the start of the container */
-  flex-wrap: wrap; /* Wrap items to next line on smaller screens */
-}
-
-.map-content,
-.pie-content {
-  flex: 1; /* Each takes equal width */
-  max-width: 50%; /* Maximum width of each container */
-  padding: 10px; /* Optional padding for spacing */
-}
-
-/* Optional: additional responsive adjustment */
-@media (max-width: 768px) {
-  .map-content,
-  .pie-content {
-    max-width: 100%;
-  }
-}
-
-/* ------------------- Pie chart styling ------------------------ */
-.pie-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  /* Changed from fixed height to auto */
-  margin: 20px;
-  background-color: transparent;
-  /* Light grey background */
-}
-
-/* Adjust SVG size to prevent clipping */
-.pie-content svg {
-  padding: 20px;
-  /* Add some padding to ensure labels fit */
-  overflow: visible;
-  /* Ensure that elements outside the SVG viewport are visible */
-}
-
-.arc path {
-  stroke: #fff;
-  /* White lines between pie slices */
-  stroke-width: 2px;
-  /* Width of the lines */
-}
-
-/* ------------------- modal styling ------------------------ */
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
+/* Style for the map container */
+#map {
+  position: absolute;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+/* Style for the popup box */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.leaflet-popup-content {
+  text-align: center;
+  margin: 4px 8px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.leaflet-popup-tip-container {
+  width: 20px;
+  height: 11px;
 }
 
+/* Existing styles */
+/* ... */
+
+/* Style for the region selection checkboxes */
+#region-checkboxes {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 1000; /* Ensures the div appears above the map */
+}
+
+/* Style for individual checkboxes and labels */
+#region-checkboxes label {
+  margin-right: 10px;
+}
+
+/* Style for the Apply Selection button */
+#region-checkboxes button {
+  margin-top: 5px;
+  padding: 5px 10px;
+}

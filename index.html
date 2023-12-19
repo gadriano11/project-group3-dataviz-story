@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Corruption Data Map</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<body>
+  <div id="region-checkboxes">
+    <input type="checkbox" id="AME" name="region" value="AME"><label for="AME">Americas</label><br>
+    <input type="checkbox" id="AP" name="region" value="AP"><label for="AP">Asia Pacific</label><br>
+    <input type="checkbox" id="ECA" name="region" value="ECA"><label for="ECA">Eastern Europe and Central Asia</label><br>
+    <input type="checkbox" id="MENA" name="region" value="MENA"><label for="MENA">Middle East and North Africa</label><br>
+    <input type="checkbox" id="SSA" name="region" value="SSA"><label for="SSA">Sub-Saharan Africa</label><br>
+    <input type="checkbox" id="WE/EU" name="region" value="WE/EU"><label for="WE/EU">Western Europe and European Union</label><br>
+    <button onclick="updateMap()">Apply Selection</button>
+  </div>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="static/js/logic.js"></script>
+</body>
+
+</html>
