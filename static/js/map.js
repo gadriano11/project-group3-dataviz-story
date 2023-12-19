@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('static/js/poverty_world_data.json')
+  fetch('/api/v1.0/jsonify')
     .then(response => response.json())
     .then(data => {
       // Process the data to fit Highcharts' format
