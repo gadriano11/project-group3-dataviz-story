@@ -1,11 +1,5 @@
-// Flags!!!
-
-import { findFlagUrlByIso3Code } from 'https://cdn.jsdelivr.net/npm/country-flags-svg@2.0.0-beta.1/+esm';
-
-
-
 // Load JSON data
-d3.json("static/js/poverty_world_data.json").then(data => {
+d3.json("static/js/corruption_data.json").then(data => {
   // Mapping of abbreviations to full region names
   const regionNames = {
     "AME": "Americas",
@@ -18,7 +12,7 @@ d3.json("static/js/poverty_world_data.json").then(data => {
 
   // Group data by region using Array.reduce
   let groupedData = data.reduce((accumulator, currentValue) => {
-    let region = currentValue.region;
+    let region = currentValue.Region;
     if (!accumulator[region]) {
       accumulator[region] = [];
     }
@@ -33,12 +27,9 @@ d3.json("static/js/poverty_world_data.json").then(data => {
 
   // Define dimensions and radius of the pie chart
   const margin = { top: 20, right: 150, bottom: 20, left: 150 }; // Increased margins
-  const width = 300 + margin.left + margin.right; // Updated width with margins
-  const height = 300 + margin.top + margin.bottom; // Updated height with margins
+  const width = 450 + margin.left + margin.right; // Updated width with margins
+  const height = 450 + margin.top + margin.bottom; // Updated height with margins
   const radius = Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom) / 2;
-
-  const total = pieData.reduce((sum, region) => sum + region.values.length, 0);
-
 
 
   // Create SVG container for the pie chart
@@ -68,51 +59,27 @@ d3.json("static/js/poverty_world_data.json").then(data => {
     .append('g')
     .attr('class', 'arc');
 
-
-  // Calculate outer arc for label connectors
-  const outerArc = d3.arc()
-    .innerRadius(radius * 1.1) // 1.1 to push the label slightly outside the pie
-    .outerRadius(radius * 1.1);
-
-  // Draw arc paths and append labels
+  // Draw arc paths
   slices.append('path')
     .attr('d', arc)
-    .attr('fill', d => color(d.data.region))
-    .each(function(d) { this._current = d; });
-
-  // Append polyline for label connectors
-  slices.append('polyline')
-    .attr('points', function(d) {
-      const pos = outerArc.centroid(d);
-      pos[0] = radius * 1.07 * (midAngle(d) < Math.PI ? 1 : -1); // Multiply by 1 or -1 to place labels on the correct side
-      return [arc.centroid(d), outerArc.centroid(d), pos];
-    })
-    .style('fill', 'none')
-    .style('stroke', '#555')
-    .style('stroke-width', '1px');
+    .attr('fill', d => color(d.data.region));
 
 
-  // Append text labels
+  // Add labels to the pie chart
   slices.append('text')
     .attr('transform', function(d) {
-      const pos = outerArc.centroid(d);
-      pos[0] = radius * 0.98 * (midAngle(d) < Math.PI ? 1 : -1); // Adjust to move text further out
-      pos[1] += 5; // Lower the label slightly
-      return `translate(${pos})`;
+      const midAngle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+      // Determine the x and y coordinates for labels
+      const x = Math.sin(midAngle) * (radius * 0.53);
+      const y = -Math.cos(midAngle) * (radius * 0.53);
+      // Rotate labels, offset by 90 degrees for the SVG's coordinate system
+      const rotation = (midAngle < Math.PI ? midAngle - Math.PI / 2 : midAngle + Math.PI / 2) * (180 / Math.PI);
+      return `translate(${x}, ${y}) rotate(${rotation})`;
     })
-    .attr('dy', '.35em')
-    .style('text-anchor', d => midAngle(d) < Math.PI ? 'start' : 'end')
-    .text(d => {
-      const percentage = (d.data.values.length / total * 100).toFixed(1); // Calculate percentage
-      return `${regionNames[d.data.region] || d.data.region}: ${percentage}%`; // Display region name and percentage
-    })
-    .style('font-weight', 'bold');
-
-  // Function to calculate the mid angle of a slice
-  function midAngle(d) {
-    return d.startAngle + (d.endAngle - d.startAngle) / 2;
-  }
-
+    .attr('text-anchor', 'middle') // Center the text on its coordinates
+    .text(d => regionNames[d.data.region] || d.data.region)
+    .style('font-weight', 'bold')
+    .style('font-size', '12px'); // Adjust font size as necessary
 
 
   // Add interactivity to pie slices
@@ -129,11 +96,9 @@ d3.json("static/js/poverty_world_data.json").then(data => {
     // Dynamically generate country buttons with popover data
     countryData.forEach((data, index) => {
       // Access properties directly from the data object
-      const countryName = data.country_name;
-      const rank = data.rank;
-      const score = data.corruption_index_score;
-      const iso3Code = data.country_code;
-      const flagUrl = findFlagUrlByIso3Code(iso3Code);
+      const countryName = data.Country;
+      const rank = data.Rank;
+      const score = data['Corruption Index Score'];
 
       // For every third country, end and start a new row for a 3-column layout
       if (index % 6 === 0 && index !== 0) {
@@ -145,7 +110,7 @@ d3.json("static/js/poverty_world_data.json").then(data => {
       <div class="col-md-2">
         <button type="button" class="btn btn-info country-button" 
           data-bs-toggle="popover" 
-          data-bs-original-title="<img class='popover-flag' src='${flagUrl}' alt='${countryName} flag'> ${countryName}"
+          data-bs-original-title="${countryName}" 
           data-bs-content="Rank: ${rank}, Corruption Index Score: ${score}">
           ${countryName}
         </button>
@@ -181,5 +146,3 @@ d3.json("static/js/poverty_world_data.json").then(data => {
     });
   }
 })
-
-

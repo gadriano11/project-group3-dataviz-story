@@ -1,14 +1,15 @@
 function createChoroplethMap(data) {
-  const corruptionScores = data.map(country => country['Corruption Index Score']);
+  const corruptionScores = data.map(country => country.corruption_index_score);
   const minScore = Math.min(...corruptionScores);
   const maxScore = Math.max(...corruptionScores);
-  const middleScore = (minScore + maxScore) / 2; // This is a simple average; you can adjust if needed
+  const middleScore = (minScore + maxScore) / 2;
+
   var mapData = [{
     type: 'choropleth',
     locationmode: 'country names',
-    locations: data.map(country => country.Country),
-    z: data.map(country => country['Corruption Index Score']),
-    text: data.map(country => `Country: ${country.Country}<br>Region: ${country.Region}<br>Rank: ${country.Rank}<br>Corruption Index Score: ${country['Corruption Index Score']}`),
+    locations: data.map(country => country.country_name),
+    z: corruptionScores,
+    text: data.map(country => `Country: ${country.country_name}<br>Region: ${country.region}<br>Rank: ${country.rank}<br>Corruption Index Score: ${country.corruption_index_score}`),
     hoverinfo: 'text',
     colorscale: [
       [0, 'rgb(255, 0, 0)'],   // Red for the most corrupt
@@ -51,13 +52,15 @@ function createChoroplethMap(data) {
       showcoastlines: false,
       projection: {
         type: 'mercator'
-      }
+      },
+      bgcolor: 'rgba(255,255,255,0)',
     },
-
-    autosize: false, /* Turn off autosize */
-    width: 800,
-    height: 600,
-    margin: { l: 0, r: 0, t: 0, b: 0 }/* Match the height of the container */
+    paper_bgcolor: '#fdf6e3', // Set the background color for the entire chart area
+    plot_bgcolor: '#fdf6e3', // Set the background color for the plot area
+    autosize: false, // Turn off autosize
+    width: 800, // Specify the fixed width of the chart
+    height: 600, // Specify the fixed height of the chart
+    margin: { l: 0, r: 0, t: 0, b: 0 } // Remove default margins
   };
 
   Plotly.newPlot('map', mapData, layout, { responsive: true });
@@ -65,9 +68,19 @@ function createChoroplethMap(data) {
 
 
 function loadAndProcessData() {
-  d3.json('static/js/corruption_data.json').then(data => {
+  d3.json('static/js/poverty_world_data.json').then(data => {
     createChoroplethMap(data);
   }).catch(error => console.error('Error:', error));
 }
 
 loadAndProcessData();
+
+// Transition code once database in use
+// function loadAndProcessData() {
+//   fetch('/api/data')
+//     .then(response => response.json())
+//     .then(data => createChoroplethMap(data))
+//     .catch(error => console.error('Error:', error));
+// }
+
+// document.addEventListener('DOMContentLoaded', loadAndProcessData);
