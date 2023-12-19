@@ -17,6 +17,8 @@ World Poverty Data:
 
 
 
+
+
 <img width="474" alt="image" src="https://github.com/gadriano11/project-group3-dataviz-story/assets/142377615/62e368a6-eca6-47c8-9439-b534de3d4ad4">
 
 
@@ -39,7 +41,12 @@ The International Poverty Line of $2.15 per day serves as a consistent threshold
 
 Links for the datasets:
 https://www.transparency.org/en/cpi/2022
+
+
 https://data.worldbank.org/indicator/SI.POV.DDAY -> Poverty headcount < $2.15 a day
+
+
+
 https://developers.google.com/public-data/docs/canonical/countries_csv -> latitude and longitude for countries
 
 
