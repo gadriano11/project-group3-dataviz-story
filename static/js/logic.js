@@ -2,6 +2,10 @@
 let myMap = L.map('map', {
   center: [0, 0], // World's center
   zoom: 2,
+  scrollWheelZoom: true, // Allows zooming with the scroll wheel
+  dragging: false, // Disables dragging
+  touchZoom: true, // Allows zooming on touch devices
+  doubleClickZoom: true, // Allows zooming with double click
 });
 
 // Adding base maps
@@ -63,10 +67,8 @@ function createTable(data, containerId) {
   let table = document.createElement('table');
   data.forEach(country => {
     let row = table.insertRow();
-    Object.values(country).forEach(text => {
-      let cell = row.insertCell();
-      cell.innerText = text;
-    });
+    let cell = row.insertCell();
+    cell.innerText = country.Country; // Only displaying country names
   });
   container.appendChild(table);
 }

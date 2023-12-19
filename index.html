@@ -7,29 +7,27 @@
   <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 <body>
-  <div id="region-checkboxes">
-    <input type="checkbox" id="AME" name="region" value="AME"><label for="AME">Americas</label><br>
-    <input type="checkbox" id="AP" name="region" value="AP"><label for="AP">Asia Pacific</label><br>
-    <input type="checkbox" id="ECA" name="region" value="ECA"><label for="ECA">Eastern Europe and Central Asia</label><br>
-    <input type="checkbox" id="MENA" name="region" value="MENA"><label for="MENA">Middle East and North Africa</label><br>
-    <input type="checkbox" id="SSA" name="region" value="SSA"><label for="SSA">Sub-Saharan Africa</label><br>
-    <input type="checkbox" id="WE/EU" name="region" value="WE/EU"><label for="WE/EU">Western Europe and European Union</label><br>
-    <button onclick="updateMap()">Apply Selection</button>
-  </div>
-  
-  <div id="map-container">
-    <div id="map"></div>
-  </div>
-
-  <div id="tables-container">
-    <div id="cleanest-table">
-      <h3>Cleanest</h3>
-      <!-- Table will be populated by JavaScript -->
+  <div class="container">
+    <div id="map-container">
+      <div id="map"></div>
     </div>
-    <div id="most-corrupt-table">
-      <h3>Most Corrupt</h3>
-      <!-- Table will be populated by JavaScript -->
+    <div id="widgets-container">
+      <div id="region-checkboxes">
+        <!-- Checkboxes here -->
+      </div>
+      <div id="cleanest-table">
+        <h3>Cleanest</h3>
+        <!-- Table will be populated by JavaScript -->
+      </div>
+      <div id="most-corrupt-table">
+        <h3>Most Corrupt</h3>
+        <!-- Table will be populated by JavaScript -->
+      </div>
     </div>
+  </div>
+  <div id="charts-container">
+    <h3>Planned Bar Chart and Pie Chart</h3>
+    <!-- Placeholder for charts -->
   </div>
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
