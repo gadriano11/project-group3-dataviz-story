@@ -17,7 +17,7 @@ Base = automap_base()
 # reflect the tables
 Base.prepare(engine, reflect=True)
 # View all of the classes that automap found
-Base.classes.keys()
+print(Base.classes.keys())
 PovertyData = Base.classes.world_poverty_data
 
 # Flask Setup
@@ -51,15 +51,16 @@ def jsonify_():
     all_countries = []
     for country_code, country_name, region, latitude, longitude, female_gross_enrolment, male_gross_enrolment, income_less_than_two_one_five in results:
         country_dict = {}
-        PovertyData.country_code = country_code
-        PovertyData.country_name = country_name
-        PovertyData.region = region
-        PovertyData.latitude = latitude
-        PovertyData.longitude = longitude
-        PovertyData.female_gross_enrolment = female_gross_enrolment
-        PovertyData.male_gross_enrolment = male_gross_enrolment
-        PovertyData.income_less_than_two_one_five = income_less_than_two_one_five
-
+        country_dict["country_code"] = country_code
+        country_dict["country_name"] = country_name
+        country_dict["region"] = region
+        country_dict["latitude"] = latitude
+        country_dict["longitude"] = longitude
+        country_dict["female_gross_enrolment"] = female_gross_enrolment
+        country_dict["male_gross_enrolment"] = male_gross_enrolment
+        country_dict["income_less_than_two_one_five"] = income_less_than_two_one_five
+        all_countries.append(country_dict)
+    print(all_countries)
     return jsonify(all_countries)
 
 if __name__ == '__main__':

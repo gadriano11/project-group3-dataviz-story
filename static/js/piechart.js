@@ -1,5 +1,6 @@
 // Load JSON data
-d3.json("static/js/corruption_data.json").then(data => {
+d3.json("/api/v1.0/jsonify").then(data => {
+  console.log(data)
   // Mapping of abbreviations to full region names
   const regionNames = {
     "AME": "Americas",
