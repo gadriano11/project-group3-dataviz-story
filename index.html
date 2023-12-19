@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Corruption Data Map</title>
   <link rel="stylesheet" href="static/css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
-
 <body>
   <div id="region-checkboxes">
     <input type="checkbox" id="AME" name="region" value="AME"><label for="AME">Americas</label><br>
@@ -18,9 +16,23 @@
     <input type="checkbox" id="WE/EU" name="region" value="WE/EU"><label for="WE/EU">Western Europe and European Union</label><br>
     <button onclick="updateMap()">Apply Selection</button>
   </div>
-  <div id="map"></div>
+  
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+
+  <div id="tables-container">
+    <div id="cleanest-table">
+      <h3>Cleanest</h3>
+      <!-- Table will be populated by JavaScript -->
+    </div>
+    <div id="most-corrupt-table">
+      <h3>Most Corrupt</h3>
+      <!-- Table will be populated by JavaScript -->
+    </div>
+  </div>
+
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="static/js/logic.js"></script>
 </body>
-
 </html>

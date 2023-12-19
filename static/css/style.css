@@ -1,30 +1,31 @@
 /* Style for the map container */
+#map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20%;
+  left: 0;
+}
+
 #map {
+  height: 100%;
+}
+
+/* Style for the tables container */
+#tables-container {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-  left: 0;
+  width: 20%;
+  background: white;
+  overflow-y: auto;
+  padding: 10px;
 }
 
-/* Style for the popup box */
-.leaflet-popup-content-wrapper {
-  border-radius: 8px;
-  font-family: 'Arial', sans-serif;
+#cleanest-table, #most-corrupt-table {
+  margin-bottom: 20px;
 }
-
-.leaflet-popup-content {
-  text-align: center;
-  margin: 4px 8px;
-}
-
-.leaflet-popup-tip-container {
-  width: 20px;
-  height: 11px;
-}
-
-/* Existing styles */
-/* ... */
 
 /* Style for the region selection checkboxes */
 #region-checkboxes {
@@ -34,15 +35,13 @@
   background: white;
   padding: 10px;
   border-radius: 8px;
-  z-index: 1000; /* Ensures the div appears above the map */
+  z-index: 1000;
 }
 
-/* Style for individual checkboxes and labels */
 #region-checkboxes label {
   margin-right: 10px;
 }
 
-/* Style for the Apply Selection button */
 #region-checkboxes button {
   margin-top: 5px;
   padding: 5px 10px;
