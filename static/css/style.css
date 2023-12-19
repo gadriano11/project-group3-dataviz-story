@@ -1,0 +1,213 @@
+html {
+  background-color: #d3d3d3;
+}
+
+.modal-xxl {
+  max-width: 98%;
+}
+
+.header-image {
+  background: url('give_alms.jpg') no-repeat center center;
+  background-size: cover;
+  height: 250px;
+}
+
+
+
+.dashboard-header {
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle, #1f1f1f, #2b2b2b, #161616);
+  margin-bottom: 0px;
+}
+
+
+.header-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.header-box .header-text-container {
+  background: rgba(0, 0, 0, 0.7);
+  /* Darker background */
+  padding: 0px;
+  /* Adjust padding as needed */
+  border-radius: 5px;
+}
+
+.button-group {
+  text-align: left;
+  padding: 0px;
+}
+
+.btn-modal {
+  margin-right: 10px;
+}
+
+/* Dashboard header modals */
+
+.modal-content {
+  background-color: #f2f2f2;
+  /* Light gray to match the grayscale theme */
+  color: #333;
+  /* Dark text for contrast */
+  border-radius: 5px;
+}
+
+/* Style for buttons to fit color theme */
+.btn-primary {
+  background-color: #555;
+  /* Dark gray */
+  border-color: #555;
+}
+
+.btn-primary:hover {
+  background-color: #666;
+  border-color: #666;
+}
+
+
+.dashboard-header h1,
+.dashboard-header h2 {
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  display: inline;
+  color: #ececec;
+  ;
+  ;
+  /* Text color for better contrast */
+}
+
+/* Style for H1 and H2 within the rectangle */
+.dashboard-header .header-box .header-text-container h1,
+.dashboard-header .header-box .header-text-container h2 {
+  margin: 0;
+  /* Remove default margin */
+  display: inline-block;
+  position: relative;
+}
+
+.dashboard-header h1 {
+  display: block;
+  margin: 0px;
+}
+
+.bg-black {
+  background-color: #000000;
+  /* Use the black color of your choice */
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-nav {
+  width: 100%;
+  position: relative;
+}
+
+.navbar-img-container {
+  margin-left: auto;
+  padding-right: 15px;
+}
+
+.navbar-img-container img {
+  height: auto;
+  width: 110px;
+}
+
+.population-dashboard {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 15px;
+}
+
+.custom-bg-color {
+  background-color: #d3d3d3;
+  /* Light blue color */
+}
+
+.dashboard-header img {
+  width: 100%;
+  /* Makes the image fill the container width */
+  height: auto;
+  /* Adjusts the height automatically */
+  display: block;
+  /* Removes any extra space below the image */
+}
+
+
+.counters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Adjust the number of columns as needed */
+  grid-gap: 2px;
+  /* Space between counters */
+  justify-content: center;
+  border: 3px solid black;
+}
+
+.counters-grid iframe {
+  height: 133px;
+
+
+  /* Scales the content down to 80% of its original size */
+  width: 100%;
+}
+
+.map-content {
+  height: 531px;
+  padding: 15px;
+  /* Adjust as needed */
+}
+
+
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+
+}
+
+.pie-content {
+  padding: 15px;
+}
+
+
+/* Style for pie chart and scatterplot containers */
+
+.scatter-content-container {
+  padding: 15px;
+
+  /* Add any specific styles you need for these containers */
+}
+
+/* Style for the animated image placeholder */
+.animated-image-placeholder {
+  height: 200px;
+  /* Adjust as needed */
+  background-color: #ddd;
+  /* Placeholder color, change as needed */
+  text-align: center;
+  line-height: 200px;
+  /* This should match the height to vertically center text */
+}
+
+@media (max-width: 768px) {
+  .population-dashboard iframe {
+    width: 100%;
+    /* Set the iframe width to 100% for smaller screens */
+  }
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+  /* This overrides the horizontal gutter */
+  --bs-gutter-y: 0 !important;
+  /* This overrides the vertical gutter if needed */
+}

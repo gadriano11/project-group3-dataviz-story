@@ -1,68 +1,253 @@
-<!DOCTYPE html>
-<html>
-
-<!--------------------------- Head section, Scripts loaded ------------------------------------>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <title>Global Poverty Analysis Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- JS Library Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+  <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+
+  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+
+  <!-- Webpage Title -->
+  <title>Global Poverty Analysis Dashboard</title>
 </head>
 
-<!--------------------------- Body section ------------------------------------>
+<!-- Content -->
 
 <body>
-  <!--------------------------- Header section ------------------------------------>
+  <!-- Headers -->
   <div class="dashboard-header">
-    <div class="header-image"></div> <!-- Removed <img> tags, will use CSS for background -->
+    <div class="header-image"></div>
     <div class="header-box">
-      <h1>Global Poverty Analysis Dashboard</h1>
-      <h2>Correlation Between Poverty, Education, and Corruption Factors</h2>
+    </div>
+    <h1>Global Poverty Analysis Dashboard</h1>
+    <h2>Correlation Between Poverty, Education, and Corruption Factors</h2>
+  </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <!-- Hamburger Menu Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#aboutModal" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#resourcesModal" href="#">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#creditsModal" href="#">Credits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#teamModal" href="#">Project Team</a>
+          </li>
+        </ul>
+        <div class="navbar-img-container">
+          <img src="static/css/beg_icon.PNG" alt="Navbar Icon" />
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Modal -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModalLabel">About</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your About content here -->
+        </div>
+      </div>
     </div>
   </div>
-  <!--------------------------- Content section ------------------------------------>
 
-  <!--------------------------- A. Map section ------------------------------------>
+  <!-- Resources Modal -->
+  <div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resourcesModalLabel">Resources</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your Resources content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Credits Modal -->
+  <div class="modal fade" id="creditsModal" tabindex="-1" aria-labelledby="creditsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="creditsModalLabel">Credits</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your Credits content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Team Modal -->
+  <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamModalLabel">Project Team</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your Project Team content here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
   <div class="content-container">
-    <div class="map-content">
-      <div id="map"></div>
+    <div class="row mb-3 custom-bg-color">
+      <div class="col-lg-9 map-content">
+        <div id="container" style="height: 500px;"></div>
+      </div>
+      <div class="col-lg-3 population-dashboard">
+
+
+
+        <div class="dashboard-header">
+          <h3>Did you know?</h3>
+          <img src="static/css/the_world_counts_logo.PNG" alt="The World Counts Logo" style="height: 50px" />
+        </div>
+        <div class="counters-grid">
+
+          <!-- First Counter -->
+          <iframe title='World population'
+            src='https://www.theworldcounts.com/embeds/counters/8?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14'
+            style='border: none' height='100' width='300'></iframe>
+
+          <!-- Second Counter -->
+          <iframe title='Number of planet Earths we need'
+            src='https://www.theworldcounts.com/embeds/counters/124?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14'
+            style='border: none' height='100' width='300'></iframe>
+
+          <!-- Third Counter -->
+          <iframe title='Earth running out of freshwater'
+            src='https://www.theworldcounts.com/embeds/counters/113?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14'
+            style='border: none' height='100' width='300'></iframe>
+
+          <!-- Fourth Counter -->
+          <iframe title='Time left till no more fish in the sea'
+            src='https://www.theworldcounts.com/embeds/counters/115?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14'
+            style='border: none' height='100' width='300'></iframe>
+
+          <!-- Fifth Counter -->
+          <iframe title='Time left till the end of rainforests'
+            src='https://www.theworldcounts.com/embeds/counters/114?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14'
+            style='border: none' height='100' width='300'></iframe>
+
+          <!-- Sixth Counter -->
+          <iframe title='Earth running out of food'
+            src='https://www.theworldcounts.com/embeds/counters/112?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14'
+            style='border: none' height='100' width='300'></iframe>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-6 custom-bg-color">
+          <div class="pie-content">
+            <div id="piechart-container" style="height: 500px; margin: 0 auto"></div>
+          </div>
+
+
+          <div id="myModal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xxl">
+              <!-- Adjust the modal size as needed -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Region Details</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                  <div id="multiset-bar-chart-container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-6 custom-bg-color">
+          <div class="scatter-content-container">
+            <h3>Correlation Scatter Plot</h3>
+            <div class="controls">
+              <!-- Dataset Selector -->
+              <label for="datasetSelect">Select Dataset:</label>
+              <select id="datasetSelect">
+                <option value="female_gross_enrolment">Female Gross Enrolment</option>
+                <option value="male_gross_enrolment">Male Gross Enrolment</option>
+                <option value="income_less_than_two_one_five">Income less than 2.15</option>
+              </select>
+
+              <!-- Rank Selector -->
+              <label for="topNSelect">Top Countries by Rank:</label>
+              <select id="topNSelect">
+                <option value="all">All Countries</option>
+                <option value="50">Top 50</option>
+                <option value="100">Top 100</option>
+              </select>
+            </div>
+            <canvas id="scatterChart"></canvas>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--------------------------- B. Pie section ------------------------------------>
-    <div class="pie-content">
-      <!--Add content here--->
-    </div>
-  </div>
-  <!--------------------------- B2. Pie Modal Window section ------------------------------------>
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Region Details</h2>
-      <p id="modal-text">Some text in the Modal..</p>
-    </div>
-
-
-    <!--------------------------- C. Bar section ------------------------------------>
-    <div class="bar-content">
-      <!--Add content here--->
-    </div>
-    <!--------------------------- D. Line section ------------------------------------>
-    <div class="line-content">
-      <!--Add content here--->
-    </div>
-    <!--------------------------- E. Scripts section ------------------------------------>
-    <script type="text/javascript" src="//counter.websiteout.net/js/24/4/0/0"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="../static/js/piechart.js"></script>
-    <script src="../static/js/map.js"></script>
-
-    <!--------------------------- E. site counter ------------------------------------>
 
 
 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script type="module" src='https://cdn.jsdelivr.net/npm/country-flags-svg@2.0.0-beta.1/+esm'></script>
+
+
+  <script type="module" src="static/js/map.js"></script>
+  <script type="module" src="static/js/piechart.js"></script>
+  <script type="module" src="static/js/scatterPlot.js"></script>
 </body>
 
 </html>

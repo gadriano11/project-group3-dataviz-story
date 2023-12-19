@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
       Highcharts.mapChart('container', {
         chart: {
           map: 'custom/world',
-          borderWidth: 1
+          borderWidth: 2,
+          borderColor: 'black',
+          borderDashStyle: 'solid'
         },
 
         title: {
