@@ -1,86 +1,81 @@
-function createChoroplethMap(data) {
-  const corruptionScores = data.map(country => country.corruption_index_score);
-  const minScore = Math.min(...corruptionScores);
-  const maxScore = Math.max(...corruptionScores);
-  const middleScore = (minScore + maxScore) / 2;
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('static/js/poverty_world_data.json')
+    .then(response => response.json())
+    .then(data => {
+      // Process the data to fit Highcharts' format
+      const processedData = data.map(country => ({
+        code3: country.country_code, // assuming 'country_code' is the ISO 3166-1 alpha-3 country code
+        name: country.country_name,
+        value: country.corruption_index_score,
+        rank: country.rank
+      }));
 
-  var mapData = [{
-    type: 'choropleth',
-    locationmode: 'country names',
-    locations: data.map(country => country.country_name),
-    z: corruptionScores,
-    text: data.map(country => `Country: ${country.country_name}<br>Region: ${country.region}<br>Rank: ${country.rank}<br>Corruption Index Score: ${country.corruption_index_score}`),
-    hoverinfo: 'text',
-    colorscale: [
-      [0, 'rgb(255, 0, 0)'],   // Red for the most corrupt
-      [0.5, 'rgb(255, 255, 0)'], // Yellow for middle corruption
-      [1, 'rgb(0, 255, 0)']     // Green for the cleanest
-    ],
-    colorbar: {
-      title: 'Corruption Perception Index',
-      titleside: 'top',
-      len: 0.71,
-      lenmode: 'fraction',
-      x: 0.5,
-      y: -0.1,
-      xanchor: 'center',
-      yanchor: 'bottom',
-      tickmode: 'array',
-      tickvals: [minScore, middleScore, maxScore],
-      ticktext: ['Highly Corrupt', 'Average', 'Very Clean'],
-      orientation: 'h',
-      titlefont: {
-        family: 'Arial, sans-serif',
-        size: 14,
-        color: 'black',
-        weight: 'bold'
-      },
-      tickfont: {
-        family: 'Arial, sans-serif',
-        size: 12,
-        color: 'black',
-        weight: 'bold',
-      }
-    }
+      // Create the Highcharts map
+      Highcharts.mapChart('container', {
+        chart: {
+          map: 'custom/world',
+          borderWidth: 1
+        },
 
-  }];
+        title: {
+          text: 'Corruption Perception Index by Country'
+        },
 
-  var layout = {
-    title: '',
-    geo: {
-      showframe: true,
-      showcoastlines: false,
-      projection: {
-        type: 'mercator'
-      },
-      bgcolor: 'rgba(255,255,255,0)',
-    },
-    paper_bgcolor: '#fdf6e3', // Set the background color for the entire chart area
-    plot_bgcolor: '#fdf6e3', // Set the background color for the plot area
-    autosize: false, // Turn off autosize
-    width: 800, // Specify the fixed width of the chart
-    height: 600, // Specify the fixed height of the chart
-    margin: { l: 0, r: 0, t: 0, b: 0 } // Remove default margins
-  };
+        subtitle: {
+          text: 'Click on a country to view detailed information'
+        },
 
-  Plotly.newPlot('map', mapData, layout, { responsive: true });
-}
+        mapNavigation: {
+          enabled: true,
+          buttonOptions: {
+            verticalAlign: 'bottom'
+          }
+        },
 
+        colorAxis: {
+          min: 0,
+          max: 100, // Adjust if the scale is different
+          minColor: '#FF0000',
+          maxColor: '#008000'
+        },
 
-function loadAndProcessData() {
-  d3.json('static/js/poverty_world_data.json').then(data => {
-    createChoroplethMap(data);
-  }).catch(error => console.error('Error:', error));
-}
+        series: [{
+          data: processedData,
+          joinBy: ['iso-a3', 'code3'],
+          name: 'Corruption Index Score',
+          states: {
+            hover: {
+              color: '#a4edba'
+            }
+          },
+          point: {
+            events: {
+              click: function() {
+                // Open modal with details on click
+                const modalTitle = document.querySelector('.modal-title');
+                const modalText = document.querySelector('#modal-text');
 
-loadAndProcessData();
+                // Set the title and text of the modal
+                modalTitle.innerHTML = this.name;
+                modalText.innerHTML = `
+                                    <strong>Corruption Index Score:</strong> ${this.value}<br/>
+                                    <strong>Rank:</strong> ${this.rank}
+                                `;
 
-// Transition code once database in use
-// function loadAndProcessData() {
-//   fetch('/api/data')
-//     .then(response => response.json())
-//     .then(data => createChoroplethMap(data))
-//     .catch(error => console.error('Error:', error));
-// }
-
-// document.addEventListener('DOMContentLoaded', loadAndProcessData);
+                // Show the modal
+                const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+                myModal.show();
+              }
+            }
+          },
+          dataLabels: {
+            enabled: false,
+            format: '{point.name}'
+          }
+        }]
+      });
+    })
+    .catch(error => {
+      console.error('Error loading the JSON data:', error);
+    });
+});
