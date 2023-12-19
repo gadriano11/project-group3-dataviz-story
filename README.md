@@ -11,6 +11,7 @@ https://gadriano11.github.io/project-group3-dataviz-story/
 
 
 World Poverty Data:
+<img width="474" alt="image" src="https://github.com/gadriano11/project-group3-dataviz-story/assets/142377615/62e368a6-eca6-47c8-9439-b534de3d4ad4">
 
 
 Introduction:
