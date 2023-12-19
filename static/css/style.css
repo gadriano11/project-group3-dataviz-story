@@ -46,3 +46,10 @@
   margin-top: 5px;
   padding: 5px 10px;
 }
+
+.custom-marker {
+  text-align: center;
+  line-height: 10px;
+  /* Adjust other styles as needed */
+}
+

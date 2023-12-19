@@ -13,6 +13,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let markers = [];
 
+// Function to determine marker color based on Corruption Index Score
+function getColorByScore(score) {
+  const percentage = score / 100;
+  const red = Math.round((1 - percentage) * 255);
+  const green = Math.round(percentage * 255);
+  const blue = 0;
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
 function clearMarkers() {
   markers.forEach(marker => myMap.removeLayer(marker));
   markers = [];
@@ -23,7 +32,14 @@ function addMarkers(selectedRegions) {
   d3.json('static/js/corruption_data.json').then(data => {
     data.forEach(function(country) {
       if (selectedRegions.length === 0 || selectedRegions.includes(country.Region)) {
-        let marker = L.marker([country.latitude, country.longitude]).addTo(myMap);
+        const color = getColorByScore(country['Corruption Index Score']);
+        let marker = L.marker([country.latitude, country.longitude], {
+          icon: L.divIcon({
+            className: 'custom-marker',
+            html: `<div style="background-color: ${color}; width: 10px; height: 10px; border-radius: 50%;"></div>`,
+            iconSize: [10, 10]
+          })
+        }).addTo(myMap);
         marker.bindPopup(`<div>
           <strong>Country:</strong> ${country.Country}<br>
           <strong>Code:</strong> ${country.Code}<br>
