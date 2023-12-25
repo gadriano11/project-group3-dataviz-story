@@ -15,8 +15,6 @@ This repository contains data, visualizations, and research related to poverty. 
 
 Our project aims to conduct a comparative analysis of global poverty focusing on the intricate relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation.
 
-## 💡 Project Objectives
-
 
 
 ## 🧰 Languages and Tools
@@ -37,21 +35,13 @@ In this project we outline the tools, language and libraries required to complet
 <br><br/>
 
 
-## 👨‍💼💻👩‍💼 Collaborators
-
-| <center>Contributors</center>    | <center>Github Profile</center>    |
-| ----------------| -------------------------------------- |
-| <center>Gabriel </center>      | https://github.com/gadriano11       |    
-| <center>Oormi</center> |   https://github.com/OormiC             |
-| <center>Rajendrar</center>| https://github.com/rajbondili           |
-| <center>Choon Sien</center>| https://github.com/sienchoon              |
+## 💡  Project Flow
 
 
 
-
+## 💡  Data Insights
 
 Key Insights: 
-
 
 Measuring Poverty: Different countries use varying poverty lines to define who is considered poor. For instance, while the United States sets a poverty line at roughly $24.55 per day, Ethiopia’s poverty line is set at just $2.04 per day. To measure global poverty consistently, we use the International Poverty Line of $2.15 per day,
 established by the World Bank and the UN.
@@ -66,6 +56,21 @@ Despite progress, hundreds of millions remain in extreme poverty. Addressing thi
 
 
 <br><br/>
+
+## 👨‍💼💻👩‍💼 Collaborators
+
+| <center>Contributors</center>    | <center>Github Profile</center>    |
+| ----------------| -------------------------------------- |
+| <center>Gabriel </center>      | https://github.com/gadriano11       |    
+| <center>Oormi</center> |   https://github.com/OormiC             |
+| <center>Rajendrar</center>| https://github.com/rajbondili           |
+| <center>Choon Sien</center>| https://github.com/sienchoon              |
+
+
+
+
+
+
 
 ## Data Sources:
 
