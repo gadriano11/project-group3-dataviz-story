@@ -25,7 +25,9 @@ This repository contains researced data, visualizations, and other documentation
 
 ## 🖥 Project Brief
 
+
 Our project aims to conduct a comparative data analysis of global poverty focusing on the intricate relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation. 
+
 
 
 ## 🧰 Languages and Tools
@@ -47,24 +49,27 @@ In this project we outline the tools, language and libraries required to complet
 
 ### HighChart JS Library
 
+
 The official npm package contains Highcharts, including the Stock, Maps and Gantt packages, plus all modules. Start by installing Highcharts as a node module and save it as a dependency in your package.json:
 
     npm install highcharts --save
  
 Include the JavaScript files in the head section of the webpage as shown below:
 
-
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
 ## 💡  Project Flow
 
+
 ![Project Flow](Project-Management.png)
+
 
 
 ## 💡  Data Insights
 
 Key Insights: 
+
 
 Measuring Poverty: Different countries use varying poverty lines to define who is considered poor. For instance, while the United States sets a poverty line at roughly $24.55 per day, Ethiopia’s poverty line is set at just $2.04 per day. To measure global poverty consistently, we use the International Poverty Line of $2.15 per day,
 established by the World Bank and the UN.
@@ -86,6 +91,21 @@ Despite progress, hundreds of millions remain in extreme poverty. Addressing thi
 | <center>Oormi</center> |   https://github.com/OormiC             |
 | <center>Rajendrar</center>| https://github.com/rajbondili           |
 | <center>Choon Sien</center>| https://github.com/sienchoon              |
+
+
+## 👨‍💼💻👩‍💼 Collaborators
+
+| <center>Contributors</center>    | <center>Github Profile</center>    |
+| ----------------| -------------------------------------- |
+| <center>Gabriel </center>      | https://github.com/gadriano11       |    
+| <center>Oormi</center> |   https://github.com/OormiC             |
+| <center>Rajendrar</center>| https://github.com/rajbondili           |
+| <center>Choon Sien</center>| https://github.com/sienchoon              |
+
+
+
+
+
 
 
 ## Data Sources:
