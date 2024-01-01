@@ -1,6 +1,6 @@
 # Project 3 Group 3 Data Visualization
 
-[webpage](https://gadriano11.github.io/project-group3-dataviz-story/)
+[webpage](https://wetseveralengineer19.gabrieladriano4.repl.co)
 
 
 <img width="474" alt="image" src="https://github.com/gadriano11/project-group3-dataviz-story/assets/142377615/62e368a6-eca6-47c8-9439-b534de3d4ad4">
@@ -14,20 +14,19 @@
 3. [Languages and Tools](#PLanguage&Tools)
 4. [Project Flow](#ProjectFlow)
 5. [Data Insight](#DataInsights)
-6. [Collaborators](#Collaborators)
-7. [Data Sources](#Sources)
+6. [Conclusion](#Conclusion)
+7. [Collaborators](#Collaborators)
+8. [Data Sources](#Sources)
 
 ## Introduction:
 
-Global poverty is one of the most pressing challenges we face today. The poorest individuals around the world lack access to basic necessities such as food, clean water, and education. Understanding poverty trends and patterns is crucial for addressing this issue effectively.
+Addressing global poverty requires a comprehensive approach, as it stands among the foremost challenges of our time. Individuals in the most impoverished corners of the world often grapple with the absence of fundamental necessities like food, clean water, and education. A nuanced comprehension of poverty's intricate trends and patterns is essential for formulating effective solutions to this pressing issue.
 
-This repository contains researced data, visualizations, and other documentations related to poverty. A breakdown of the project includes project structure, workflow and resources to provide insights on collaboration. The goal is to provide useful data to manage projects for future users and how data can be used to provide solutions for tackling poverty issue. <br><br/>
+This repository contains researced data, visualizations, and other documentations related to EDA of global poverty. Breakdown of the project includes project structure, workflow, data analysis and resources to provide insights on collaboration work and result of the project. The objective is to furnish valuable data to guide future project management, illustrating how this data can serve as a pivotal tool in devising impactful solutions for combating the issue of poverty.. <br><br/>
 
 ## 🖥 Project Brief
 
-
-Our project aims to conduct a comparative data analysis of global poverty focusing on the intricate relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation. 
-
+Our project aims to conduct a comparative data analysis of global poverty focusing on the differences within individual countries and their relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation. 
 
 
 ## 🧰 Languages and Tools
@@ -47,7 +46,7 @@ In this project we outline the tools, language and libraries required to complet
 <br><br/>
 <br><br/>
 
-### HighChart JS Library
+### 📊 HighChart JS Library
 
 
 The official npm package contains Highcharts, including the Stock, Maps and Gantt packages, plus all modules. Start by installing Highcharts as a node module and save it as a dependency in your package.json:
@@ -59,30 +58,56 @@ Include the JavaScript files in the head section of the webpage as shown below:
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
-## 💡  Project Flow
+## 🔃 Project Flow
 
 
 ![Project Flow](Project-Management.png)
+Project Initiation: 11 - December - 2023 <br>
+Project Completion: 04 - January - 2024 </br>
 
+## 💡 Data Insights
 
+In an objective approach to compiling and generating a report, we employed specific measurements to aid in discerning the correlation between poverty, corruption, and education across different countries. 
 
-## 💡  Data Insights
+The research and data analysis exclusively utilized the dataset from the year 2020, primarily due to constraints related to the available data. This choice was particularly relevant as the study period coincided with the outbreak of a global pandemic, a transformative event that significantly reshaped the dynamics of the world during that timeframe.
 
-Key Insights: 
+`1 -  GLOBAL CORRUPTION INDEX `<br>
+<ul> 
 
+The Global Corruption Index (GCI), specifically the Corruption Perceptions Index (CPI) by Transparency International, is an annual assessment that ranks countries based on the perceived level of corruption in their public sectors. GCI covers 196 countries and territories and measures the state of corruption and white collar crimes around the world.
 
-Measuring Poverty: Different countries use varying poverty lines to define who is considered poor. For instance, while the United States sets a poverty line at roughly $24.55 per day, Ethiopia’s poverty line is set at just $2.04 per day. To measure global poverty consistently, we use the International Poverty Line of $2.15 per day,
-established by the World Bank and the UN.
+![CPI](<cpi scale.jpg>)
+The score on a scale of 0 (highly corrupted) to 100 (very clean) 
 
-Decline in Extreme Poverty:
+The year 2020 was marked by the outbreak of a global pandemic which profoundly reshaped the world.
 
-Over the last generation, global extreme poverty has significantly decreased. However, millions still live in extreme poverty, especially in low-income countries.
+Corruption and emergencies feed off each other, creating a vicious cycle of mismanagement and deeper crisis. The large sums of money required to deal with emergencies and the need for urgency in disbursing these funds form a perfect storm for corruption.
+ </ul>
 
-Challenges Ahead: 
+`2  -  International Poverty Line < $2.15 per day `<br>
+<ul>
+In September 2022, the figure at which this poverty line is set shifted from $1.90 to $2.15.
+The international poverty line is the threshold below which a person is considered to be living in poverty. It is often expressed as a monetary value per day, and one commonly used threshold is $2.15 per day. This means that individuals living on less than $2.15 per day are considered to be living in extreme poverty.
 
-Despite progress, hundreds of millions remain in extreme poverty. Addressing this requires continued efforts and innovative solutions.
+More information: on https://ourworldindata.org/from-1-90-to-2-15-a-day-the-updated-international-poverty-line
+</ul>
 
-<br><br/>
+`3  -  Gender Gap Education Enrollment `<br>
+<ul>
+The disparity in educational opportunities among gender can contribute to a perpetuation of corruption. In individual countries with higher corruption level, male students are predominantly enrolled compared to women, and sets the stage for imbalances in societal power dynamics. These imbalances, often reinforced by traditional gender norms, can manifest in corrupt practices, as unequal access to education may foster an environment where certain groups hold disproportionate influence.
+</ul>
+</br>
+
+## ☑️ Conclusion
+
+In conclusion, the exploration of global poverty through the lens of three key measurements—Global Corruption Index (GCI), International Poverty Line (IPL), and Gender Gap in Education Enrollment—reveals interconnected dynamics that shape the socio-economic landscape. This index highlights the alarming association between emergencies and corruption, emphasizing the need for transparency and effective governance during crises to prevent the exacerbation of societal challenges.
+
+Moreover, the International Poverty Line, recently shifted to $2.15 per day, establishes a monetary threshold for extreme poverty. This underscores the ongoing struggle for individuals living below this line, emphasizing the importance of addressing poverty as a multifaceted challenge requiring comprehensive solutions. 
+
+Finally, the Gender Gap in Education Enrollment sheds light on the intricate connection between education, corruption, and societal power imbalances. The disparity in educational opportunities, particularly in countries with higher corruption levels, not only perpetuates gender inequalities but also contributes to the perpetuation of corrupt practices.
+
+In essence, the examination of these three measurements collectively underscores the need for holistic and interconnected approaches in tackling global poverty. Addressing corruption, understanding poverty thresholds, and promoting gender-inclusive education are integral components in fostering sustainable development and mitigating the complex challenges that perpetuate poverty on a global scale.
+
 ## 👨‍💼💻👩‍💼 Collaborators
 
 | <center>Contributors</center>    | <center>Github Profile</center>    |
@@ -93,22 +118,8 @@ Despite progress, hundreds of millions remain in extreme poverty. Addressing thi
 | <center>Choon Sien</center>| https://github.com/sienchoon              |
 
 
-## 👨‍💼💻👩‍💼 Collaborators
 
-| <center>Contributors</center>    | <center>Github Profile</center>    |
-| ----------------| -------------------------------------- |
-| <center>Gabriel </center>      | https://github.com/gadriano11       |    
-| <center>Oormi</center> |   https://github.com/OormiC             |
-| <center>Rajendra</center>| https://github.com/rajbondili           |
-| <center>Choon Sien</center>| https://github.com/sienchoon              |
-
-
-
-
-
-
-
-## Data Sources:
+## 📰 Data Sources:
 
 Our data relies on national household surveys, which may differ across countries and over time.
 The International Poverty Line of $2.15 per day serves as a consistent threshold for extreme poverty worldwide.
@@ -119,7 +130,7 @@ https://data.worldbank.org/indicator/SI.POV.DDAY -> Poverty headcount < $2.15 a 
 
 https://developers.google.com/public-data/docs/canonical/countries_csv -> latitude and longitude for countries
 
-
+https://ourworldindata.org/economic-inequality-by-gender -> Economic Inequality by gender
 
 
 
