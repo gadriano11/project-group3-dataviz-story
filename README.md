@@ -42,10 +42,9 @@ In this project we outline the tools, language and libraries required to complet
 <img align="left" alt="VSCode" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
 <img align="left" alt="Jupyter" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" />
 <img align="left" alt="JavaScript" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-<img align="left" alt="CSS" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" /> <br/>
+<img align="left" alt="CSS" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" /> <br>
 
-<br><br/>
-<br><br/>
+<br><br><br><br><br><br><br>
 
 ### 📊 HighChart JS Library
 
@@ -64,7 +63,7 @@ Include the JavaScript files in the head section of the webpage as shown below:
 
 ![Project Flow](Project-Management.png)
 Project Initiation: 11 - December - 2023 <br>
-Project Completion: 04 - January - 2024 </br>
+Project Completion: 04 - January - 2024 <br>
 
 ## 💡 Data Insights
 
@@ -97,7 +96,7 @@ More information: on https://ourworldindata.org/from-1-90-to-2-15-a-day-the-upda
 <ul>
 The disparity in educational opportunities among gender can contribute to a perpetuation of corruption. In individual countries with higher corruption level, male students are predominantly enrolled compared to women, and sets the stage for imbalances in societal power dynamics. These imbalances, often reinforced by traditional gender norms, can manifest in corrupt practices, as unequal access to education may foster an environment where certain groups hold disproportionate influence.
 </ul>
-</br>
+<br>
 
 ## ☑️ Conclusion
 
