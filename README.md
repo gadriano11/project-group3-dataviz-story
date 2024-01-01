@@ -63,7 +63,7 @@ Include the JavaScript files in the head section of the webpage as shown below:
 
 ![Project Flow](Project-Management.png)
 Project Initiation: 11 - December - 2023 <br>
-Project Completion: 04 - January - 2024 <br>
+Project Completion: 02 - January - 2024 <br>
 
 ## 💡 Data Insights
 
