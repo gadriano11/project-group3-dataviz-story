@@ -14,20 +14,20 @@
 3. [Languages and Tools](#PLanguage&Tools)
 4. [Project Flow](#ProjectFlow)
 5. [Data Insight](#DataInsights)
-6. [Collaborators](#Collaborators)
-7. [Data Sources](#Sources)
+6. [Conclusion](#Conclusion)
+7. [How to use report](#HowToUseReport)
+8. [Collaborators](#Collaborators)
+9. [Data Sources](#Sources)
 
 ## Introduction:
 
-Global poverty is one of the most pressing challenges we face today. The poorest individuals around the world lack access to basic necessities such as food, clean water, and education. Understanding poverty trends and patterns is crucial for addressing this issue effectively.
+Addressing global poverty requires a comprehensive approach, as it stands among the foremost challenges of our time. Individuals in the most impoverished corners of the world often grapple with the absence of fundamental necessities like food, clean water, and education. A nuanced comprehension of poverty's intricate trends and patterns is essential for formulating effective solutions to this pressing issue.
 
-This repository contains researced data, visualizations, and other documentations related to poverty. A breakdown of the project includes project structure, workflow and resources to provide insights on collaboration. The goal is to provide useful data to manage projects for future users and how data can be used to provide solutions for tackling poverty issue. <br><br/>
+This repository contains researced data, visualizations, and other documentations related to EDA of global poverty. Breakdown of the project includes project structure, workflow, data analysis and resources to provide insights on collaboration work and result of the project. The objective is to furnish valuable data to guide future project management, illustrating how this data can serve as a pivotal tool in devising impactful solutions for combating the issue of poverty.. <br><br/>
 
 ## 🖥 Project Brief
 
-
-Our project aims to conduct a comparative data analysis of global poverty focusing on the intricate relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation. 
-
+Our project aims to conduct a comparative data analysis of global poverty focusing on the differences within individual countries and their relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation. 
 
 
 ## 🧰 Languages and Tools
@@ -47,8 +47,7 @@ In this project we outline the tools, language and libraries required to complet
 <br><br/>
 <br><br/>
 
-### HighChart JS Library
-
+### 📊 HighChart JS Library
 
 The official npm package contains Highcharts, including the Stock, Maps and Gantt packages, plus all modules. Start by installing Highcharts as a node module and save it as a dependency in your package.json:
 
@@ -59,21 +58,21 @@ Include the JavaScript files in the head section of the webpage as shown below:
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
-## 💡 Project Flow
-
+## 🔃 Project Flow
 
 ![Project Flow](Project-Management.png)
 
-
-
 ## 💡 Data Insights
 
-Objectively, to compile the data and generate a report, we used the following measurements to assist in determining the correlation between poverty, corruption and education per country.
+Objectively, to compile the data and generate a report, we used the following measurements to assist in determining the correlation between poverty, corruption and education among individual countries.
 
 `1 -  CORRUPTION INDEX `<br>
 <ul> 
-</ul>
+In September 2022, the figure at which this poverty line is set shifted from $1.90 to $2.15.
+The international poverty line is the threshold below which a person is considered to be living in poverty. It is often expressed as a monetary value per day, and one commonly used threshold is $2.15 per day. This means that individuals living on less than $2.15 per day are considered to be living in extreme poverty.<br>
 
+More information: on https://ourworldindata.org/from-1-90-to-2-15-a-day-the-updated-international-poverty-line </br>
+</ul>
 
 `2  -  International Poverty Line < $2.15 per day `<br>
 <ul>
@@ -83,13 +82,13 @@ Objectively, to compile the data and generate a report, we used the following me
 <ul>
 </ul>
 
-
+</br>
 
 ## ☑️ Conclusion
 
 
 
-## ❓ How to use this report
+## ❓ How to use report
 
 
 <br><br/>
