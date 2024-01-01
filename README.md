@@ -49,17 +49,30 @@ In this project we outline the tools, language and libraries required to complet
 
 The official npm package contains Highcharts, including the Stock, Maps and Gantt packages, plus all modules. Start by installing Highcharts as a node module and save it as a dependency in your package.json:
 
-    npm install highcharts --save
+        npm install highcharts --save
  
 Include the JavaScript files in the head section of the webpage as shown below:
 
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
 
+### Chart JS Library
 
-## 💡  Project Flow
+Instllation:
 
-![Project Flow](Project-Management.png)
+        npm install chart.js
+
+Include the JavaScript files in the head section of the webpage as shown below:
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+## 🔀  Project Flow
+
+![Project Flow](Project-Management.png)<br>
+
+Project Initiation Date : 11 December 2023 <br/>
+Project Completion Date : 04 January 2024  <br/>
+
 
 
 ## 💡  Data Insights
