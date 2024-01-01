@@ -89,7 +89,7 @@ Despite progress, hundreds of millions remain in extreme poverty. Addressing thi
 | ----------------| -------------------------------------- |
 | <center>Gabriel </center>      | https://github.com/gadriano11       |    
 | <center>Oormi</center> |   https://github.com/OormiC             |
-| <center>Rajendrar</center>| https://github.com/rajbondili           |
+| <center>Rajendra</center>| https://github.com/rajbondili           |
 | <center>Choon Sien</center>| https://github.com/sienchoon              |
 
 
@@ -99,7 +99,7 @@ Despite progress, hundreds of millions remain in extreme poverty. Addressing thi
 | ----------------| -------------------------------------- |
 | <center>Gabriel </center>      | https://github.com/gadriano11       |    
 | <center>Oormi</center> |   https://github.com/OormiC             |
-| <center>Rajendrar</center>| https://github.com/rajbondili           |
+| <center>Rajendra</center>| https://github.com/rajbondili           |
 | <center>Choon Sien</center>| https://github.com/sienchoon              |
 
 
