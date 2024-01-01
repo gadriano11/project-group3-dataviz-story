@@ -27,7 +27,9 @@ This repository contains researced data, visualizations, and other documentation
 
 ## 🖥 Project Brief
 
+
 Our project aims to conduct a comparative data analysis of global poverty focusing on the differences within individual countries and their relationship between poverty, education and corruption factors. The primary objective is to unravel the complex interplay of these elements through data visualisation to inform targeted interventions and policies aimed at poverty alleviation. 
+
 
 
 ## 🧰 Languages and Tools
@@ -49,6 +51,7 @@ In this project we outline the tools, language and libraries required to complet
 
 ### 📊 HighChart JS Library
 
+
 The official npm package contains Highcharts, including the Stock, Maps and Gantt packages, plus all modules. Start by installing Highcharts as a node module and save it as a dependency in your package.json:
 
     npm install highcharts --save
@@ -60,11 +63,12 @@ Include the JavaScript files in the head section of the webpage as shown below:
 
 ## 🔃 Project Flow
 
+
 ![Project Flow](Project-Management.png)
 
 ## 💡 Data Insights
 
-Objectively, to compile the data and generate a report, we used the following measurements to assist in determining the correlation between poverty, corruption and education among individual countries.
+In an objective approach to compiling and generating a report, we employed specific measurements to aid in discerning the correlation between poverty, corruption, and education across different countries.
 
 `1 -  CORRUPTION INDEX `<br>
 <ul> 

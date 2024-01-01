@@ -211,3 +211,28 @@ html {
   --bs-gutter-y: 0 !important;
   /* This overrides the vertical gutter if needed */
 }
+
+.white-bar {
+  height: 50px; /* Adjust the height as needed */
+  background-color: white;
+  width: 100%;
+  position: relative;
+}
+
+.moving-image {
+  position: absolute;
+  height: 100%; /* Make the image fill the bar. Adjust as needed */
+  animation-name: slide;
+  animation-duration: 20s; /* Duration of one cycle */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; /* Repeat the animation forever */
+}
+
+@keyframes slide {
+  from {
+    left: 0%; /* Start from outside the bar on the left */
+  }
+  to {
+    left: 95%; /* Move to outside the bar on the right */
+  }
+}

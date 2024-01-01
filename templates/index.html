@@ -55,9 +55,6 @@
             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#resourcesModal" href="#">Resources</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#creditsModal" href="#">Credits</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#teamModal" href="#">Project Team</a>
           </li>
         </ul>
@@ -68,65 +65,106 @@
     </div>
   </nav>
 
-  <!-- About Modal -->
-  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="aboutModalLabel">About</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Add your About content here -->
-        </div>
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="aboutModalLabel">ABOUT</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div>
-  </div>
+      <div class="modal-body">
+        <h2>Introduction</h2>
+        <p style="text-align: justify;">
+          Global poverty is one of the most pressing challenges we face today. The poorest individuals around the world lack access to basic necessities such as food, clean water, and education. Understanding poverty trends and patterns is crucial for addressing this issue effectively.
+        </p>
+        <p style="text-align: justify;">
+          This repository contains data, visualizations, and research related to poverty. Our goal is to provide insights into the scale of the problem.
+        </p>
 
-  <!-- Resources Modal -->
-  <div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="resourcesModalLabel">Resources</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Add your Resources content here -->
-        </div>
-      </div>
-    </div>
-  </div>
+        <h2 style="margin-bottom: 20px;">Key Insights</h2>
+        <h4 style="text-align: justify; font-size: 16px;">Measuring Poverty:</h4>
+        <p style="text-align: justify;">
+          Different countries use varying poverty lines to define who is considered poor. For instance, while the United States sets a poverty line at roughly $24.55 per day, Ethiopia’s poverty line is set at just $2.04 per day. To measure global poverty consistently, we use the International Poverty Line of $2.15 per day, established by the World Bank and the UN.
+        </p>
+        <h4 style="text-align: justify; font-size: 16px;">Decline in Extreme Poverty:</h4>
+        <p style="text-align: justify;">
+          Over the last generation, global extreme poverty has significantly decreased. However, millions still live in extreme poverty, especially in low-income countries.
+        </p>
+        <h4 style="text-align: justify; font-size: 16px;">Challenges Ahead:</h4>
+        <p style="text-align: justify;">
+          Despite progress, hundreds of millions remain in extreme poverty. Addressing this requires continued efforts and innovative solutions.
+        </p>
 
-  <!-- Credits Modal -->
-  <div class="modal fade" id="creditsModal" tabindex="-1" aria-labelledby="creditsModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="creditsModalLabel">Credits</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Add your Credits content here -->
-        </div>
+        <div style="margin-top: 20px;"></div> <!-- Add space after Key Insights -->
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Project Team Modal -->
-  <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="teamModalLabel">Project Team</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Add your Project Team content here -->
-        </div>
+
+
+<!-- Resources Modal -->
+<div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="resourcesModalLabel">RESOURCES</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Data Sources:</h3>
+        <p style="text-align: justify;">
+          Our data relies on national household surveys, which may differ across countries and over time.
+        </p>
+        <p style="text-align: justify;">
+          The International Poverty Line of $2.15 per day serves as a consistent threshold for extreme poverty worldwide.
+        </p>
+
+        <h3>Links for the datasets:</h3>
+        <ul>
+          <li><a href="https://www.transparency.org/en/cpi/2022" target="_blank">Transparency International - Corruption Perceptions Index 2022</a></li>
+          <li><a href="https://data.worldbank.org/indicator/SI.POV.DDAY" target="_blank">World Bank - Poverty headcount < $2.15 a day</a></li>
+          <li><a href="https://developers.google.com/public-data/docs/canonical/countries_csv" target="_blank">Google Developers - Latitude and Longitude for Countries</a></li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
+
+
+
+<!-- Project Team Modal -->
+<div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="teamModalLabel">Project Team</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 10px;">
+            <span style="font-weight: bold;">&#10148;</span>
+            <a href="https://github.com/gadriano11" target="_blank">Gabriel Adriano</a>
+          </li>
+          <li style="margin-bottom: 10px;">
+            <span style="font-weight: bold;">&#10148;</span>
+            <a href="https://github.com/OormiC" target="_blank">Oormi Chakravarty</a>
+          </li>
+          <li style="margin-bottom: 10px;">
+            <span style="font-weight: bold;">&#10148;</span>
+            <a href="https://github.com/rajbondili" target="_blank">Rajendra Bondili</a>
+          </li>
+          <li style="margin-bottom: 10px;">
+            <span style="font-weight: bold;">&#10148;</span>
+            <a href="https://github.com/sienchoon" target="_blank">Choon Sien Wong</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -255,6 +293,9 @@
       </div>
     </div>
 
+    <div class="white-bar">
+      <img src="../static/css/family_moving.gif" alt="Moving Image" class="moving-image">
+    </div>
 
 
 
