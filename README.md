@@ -10,13 +10,13 @@
 ## Table of Contents
 
 1. [Introduction](#Introduction)
-2. [Project Brief](#ProjectBrief)
-3. [Languages and Tools](#PLanguage&Tools)
-4. [Project Flow](#ProjectFlow)
-5. [Data Insight](#DataInsights)
+2. [Project Brief](#Project_Brief)
+3. [Languages and Tools](#Language_and_Tools)
+4. [Project Flow](#Project_Flow)
+5. [Data Insight](#Data_Insights)
 6. [Conclusion](#Conclusion)
 7. [Collaborators](#Collaborators)
-8. [Data Sources](#Sources)
+8. [Data Sources](#Data_Sources)
 
 ## Introduction:
 
@@ -41,7 +41,8 @@ In this project we outline the tools, language and libraries required to complet
 <img align="left" alt="Flask" width="80px" style="padding-right:12px;" img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
 <img align="left" alt="VSCode" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
 <img align="left" alt="Jupyter" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" />
-<img align="left" alt="JavaScript" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /> <br/>
+<img align="left" alt="JavaScript" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img align="left" alt="CSS" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" /> <br/>
 
 <br><br/>
 <br><br/>
