@@ -9,14 +9,14 @@
 
 ## Table of Contents
 
-1. [Introduction](#Introduction)
-2. [Project Brief](#Project_Brief)
-3. [Languages and Tools](#Language_and_Tools)
-4. [Project Flow](#Project_Flow)
-5. [Data Insight](#Data_Insights)
-6. [Conclusion](#Conclusion)
-7. [Collaborators](#Collaborators)
-8. [Data Sources](#Data_Sources)
+1. [Introduction](#introduction)
+2. [Project Brief](#project-brief)
+3. [Languages and Tools](#languages-and-tools)
+4. [Project Flow](#project-flow)
+5. [Data Insight](#data-insight)
+6. [Conclusion](#conclusion)
+7. [Collaborators](#collaborators)
+8. [Data Sources](#data-sources)
 
 ## Introduction:
 
