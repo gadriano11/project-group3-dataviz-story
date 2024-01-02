@@ -92,7 +92,7 @@ The international poverty line is the threshold below which a person is consider
 More information: on https://ourworldindata.org/from-1-90-to-2-15-a-day-the-updated-international-poverty-line
 </ul>
 
-`3  -  Gender Gap Education Enrollment `<br>
+`3  -  Gender Gap in Education Enrollment `<br>
 <ul>
 The disparity in educational opportunities among gender can contribute to a perpetuation of corruption. In individual countries with higher corruption level, male students are predominantly enrolled compared to women, and sets the stage for imbalances in societal power dynamics. These imbalances, often reinforced by traditional gender norms, can manifest in corrupt practices, as unequal access to education may foster an environment where certain groups hold disproportionate influence.
 </ul>
