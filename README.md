@@ -9,14 +9,14 @@
 
 ## Table of Contents
 
-1. [Introduction](#Introduction)
-2. [Project Brief](#Project_Brief)
-3. [Languages and Tools](#Language_and_Tools)
-4. [Project Flow](#Project_Flow)
-5. [Data Insight](#Data_Insights)
-6. [Conclusion](#Conclusion)
-7. [Collaborators](#Collaborators)
-8. [Data Sources](#Data_Sources)
+1. [Introduction](#introduction)
+2. [Project Brief](#project-brief)
+3. [Languages and Tools](#languages-and-tools)
+4. [Project Flow](#project-flow)
+5. [Data Insight](#data-insight)
+6. [Conclusion](#conclusion)
+7. [Collaborators](#collaborators)
+8. [Data Sources](#data-sources)
 
 ## Introduction:
 
@@ -42,10 +42,9 @@ In this project we outline the tools, language and libraries required to complet
 <img align="left" alt="VSCode" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
 <img align="left" alt="Jupyter" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" />
 <img align="left" alt="JavaScript" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-<img align="left" alt="CSS" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" /> <br/>
+<img align="left" alt="CSS" width="80px" style="padding-right:12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" /> <br>
 
-<br><br/>
-<br><br/>
+<br><br><br><br><br><br><br>
 
 ### 📊 HighChart JS Library
 
@@ -64,7 +63,7 @@ Include the JavaScript files in the head section of the webpage as shown below:
 
 ![Project Flow](Project-Management.png)
 Project Initiation: 11 - December - 2023 <br>
-Project Completion: 04 - January - 2024 </br>
+Project Completion: 02 - January - 2024 <br>
 
 ## 💡 Data Insights
 
@@ -93,11 +92,11 @@ The international poverty line is the threshold below which a person is consider
 More information: on https://ourworldindata.org/from-1-90-to-2-15-a-day-the-updated-international-poverty-line
 </ul>
 
-`3  -  Gender Gap Education Enrollment `<br>
+`3  -  Gender Gap in Education Enrollment `<br>
 <ul>
 The disparity in educational opportunities among gender can contribute to a perpetuation of corruption. In individual countries with higher corruption level, male students are predominantly enrolled compared to women, and sets the stage for imbalances in societal power dynamics. These imbalances, often reinforced by traditional gender norms, can manifest in corrupt practices, as unequal access to education may foster an environment where certain groups hold disproportionate influence.
 </ul>
-</br>
+<br>
 
 ## ☑️ Conclusion
 
